@@ -1,0 +1,11 @@
+Make folders: 
+- default
+- advanced
+
+In folders:
+- default:
+	- [computer/default] specially changed for turtles
+
+- advanced:
+	- [default] with colors
+
