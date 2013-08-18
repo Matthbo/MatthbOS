@@ -1,0 +1,55 @@
+local OS = "Welcome to MatthbOS | Indev v0.01.0"
+local m = 0
+local b = 0
+
+function checkInstalledAddons()
+	if fs.exists("MatthbOS/addons/locks/Installed") == true then
+		print("Locks Addon is installed!")
+	
+	else
+		m = 1
+		sleep(0.5)
+		print("No Addons installed, if you want to install addons go to this link!")
+		print("")
+		print("pastebin.com/u/Matthbo") --print("No link yet!!!")
+		sleep(2)
+	end
+end
+
+function ok()
+	term.setCursorPos(1,14)
+	print("Everything is working!")
+	sleep(4)
+	shell.run("MatthbOS/MatthbOS")
+end
+
+term.clear()
+term.setCursorPos(1,1)
+
+print(OS)
+sleep(0.5)
+print("Starting Up ")
+term.setCursorPos(12,2)
+sleep(0.5)
+print(".")
+term.setCursorPos(13,2)
+sleep(0.5)
+print(".")
+term.setCursorPos(14,2)
+sleep(0.5)
+print(".")
+term.setCursorPos(1,5)
+
+if fs.exists("/MatthbOS/useless/files/Installed") == true then
+	print("checking addons...")
+	checkInstalledAddons()
+	ok()
+
+else
+	print("prepairing MatthbOS...")
+	fs.move("/MatthbOS/useless/files/Uninstalled", "/MatthbOS/useless/files/Installed")
+	print("Done!")
+	print("Checking if addons are installed...")
+	checkInstalledAddons()
+	ok()
+end
