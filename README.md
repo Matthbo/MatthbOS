@@ -1,7 +1,7 @@
 ##MatthbOS
 
 * [Download](#download)
-* [Installation](#installation)
+* [Installation](#installation-testing-only)
 * [Issues](#issues)
 
 The sourcecode for the MatthbOS os for ComputerCraft
